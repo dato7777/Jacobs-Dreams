@@ -155,7 +155,7 @@ const Navbar2 = () => {
                                         {userName} Logged 
                                     </button>
                                     <ul className="dropdown-menu pull-right dropdown-menu dropdown-menu-dark">
-                                        <li><a className="dropdown-item active" href="#">Edit details</a></li>
+                                        
                                         <li><Link to={"/shoppingcart"}> <a className="dropdown-item" >My cart</a></Link></li>
                                         <li><Link to={"/favourites"}> <a className="dropdown-item" >My Favorites</a></Link></li>
                                         <li><Link to={"/orderdetails"}> <a className="dropdown-item" >My Orders</a></Link></li>
