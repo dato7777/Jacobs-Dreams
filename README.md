@@ -67,7 +67,7 @@ Front Installation:
   npm i jwt-decode \
 
 4) And finally, to run the project please run this command inside front terminal:\
-  npm start
+  npm start  \
 
 For your reference, these are my installed packages after running "npm list" command inside terminal:\
 ├── @emotion/react@11.10.5
@@ -102,6 +102,8 @@ For your reference, these are my installed packages after running "npm list" com
 ├── styled@1.0.0
 └── web-vitals@2.1.4
 
+## The website home page should look like this: \
+<img src="./homepage.png">
 
 ## DATABASE
 My database structure in simple words:\
