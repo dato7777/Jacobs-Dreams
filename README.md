@@ -69,8 +69,9 @@ Front Installation:
 4) And finally, to run the project please run this command inside front terminal:\
   npm start  \
  
-5) superuser username: jacob613 
-             password: bengur613
+5) superuser \
+username: jacob613 \
+password: bengur613 \
 
 For your reference, these are my installed packages after running "npm list" command inside terminal:\
 ├── @emotion/react@11.10.5
@@ -131,6 +132,6 @@ In Django, tables are created in a folder named "models" and their respective fi
 As we see in the above table creation sample, every table has its primary key "PK", and it could also have Foreign key "FK", as in the sample above. \
 Above, "user" is the FK, which means that "user" column from the "User" table and "user" column from "Product" table are interconnected, joined.\
 So from now on, we can extract information from both tables, as they are already joined and communicating.
-### This way, we are going to create as many tables as we need, so that all tables are joined and we can extract any needed info as per our request.
+### This way, I am going to create as many tables as I need, so that all tables are joined and I can extract any needed info as per my request.
 
 <img src="./myDia.jpeg">
