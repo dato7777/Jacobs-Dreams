@@ -1,11 +1,9 @@
 
-</p>
-<!-- ![This is an image](https://www.europeanbusinessreview.com/wp-content/uploads/2020/10/unnamed-1.jpg) -->
 
 # PROJECT NAME: Drinks Online Store "Jacob's Dreams"
 ## by Jacob Gorelashvili
 This project is a web-based online Drinks online store application. It is going to manage purchasing of alcoholic/non alcoholic drinks online on website, by adding to shopping cart and also adding to favourites of the wished products by a registered /unregistered user, and then make a checkout.
-It has its own admin options when logged in via admin or staff credentials and opening relevant options for him like adding, deleting or updating products and their categories. Staff user can also add another staff/non staff user.
+It has its own admin options when logged in via admin or staff credentials and opening relevant options for him like adding, deleting or updating products and their categories. For best experience please upload images within 700x700 pixels. Staff user can also add another staff/non staff user.
 
 ## Technologies and frameworks used in project:
 -Python\
@@ -19,9 +17,9 @@ It has its own admin options when logged in via admin or staff credentials and o
 ## Basic installation:
 Project installation:
 The git address for my project is:\
-https://github.com/dato7777/alco1.git   \
+https://github.com/dato7777/Jacobs-Dreams.git   \
 After opening your VS code, please run this command in your terminal to open project:\
-  git clone https://github.com/dato7777/alco1.git
+  git clone https://github.com/dato7777/Jacobs-Dreams.git
 Back Installation:
 1) If you have not yet installed the virtual environment package, please do so:\
     pip install virtualenv
