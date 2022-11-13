@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    color: rgb(26, 38, 49);
+    
+  }
+  
+.menu {
+  
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    z-index: 1;
+    padding: 20px;
+    max-width: 1100px;
+    margin: 2px auto;
+    border-bottom: 1px solid #eee;
+    top: 0;
+    background-color: #1a1a1a;;
+    color: rgb(34, 32, 25);
+    @media (max-width: 650px) {
+      flex-direction: column;
+      align-items: center;
+    }
+}
+.item {
+      padding: 18px 28px;
+      cursor: pointer;
+      transition: color .3s ease-out;
+      text-decoration: none;
+      color: rgb(120, 228, 19);
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-size: 12px;
+      margin: 5px 0;
+      
+      &.active {
+        color: rgb(14, 13, 13);
+      }
+    }
+    
+.indicator {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 30px;
+    }
+.badge {
+  padding-left: 9px;
+  padding-right: 9px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+
+.label-warning[href],
+.badge-warning[href] {
+  background-color: #c67605;
+}
+#lblCartCount {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: -10px; 
+}
+#fav1Count {
+    font-size: 12px;
+    background: #ff0000;
+    color: #fff;
+    padding: 0 5px;
+    vertical-align: top;
+    margin-left: 10px; 
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.sticky + .content {
+  padding-top: 60px;
+}
+.icon-heart {
+  color: rgb(67, 216, 29);
+}
