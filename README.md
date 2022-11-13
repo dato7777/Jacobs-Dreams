@@ -71,7 +71,7 @@ Front Installation:
  
 5) superuser \
 username: jacob613 \
-password: bengur613 \
+password: bengur613     \
 
 For your reference, these are my installed packages after running "npm list" command inside terminal:\
 ├── @emotion/react@11.10.5
