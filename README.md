@@ -26,7 +26,7 @@ Back Installation:
 1) If you have not yet installed the virtual environment package, please do so:\
     pip install virtualenv. \
 2) Please make sure that you are in main folder in the terminal (outside Back and Front), then create
-virtual environment:
+virtual environment:  \
     python -m virtualenv myenv   
     In case of failure, please replace word "python" with "python3".
 3) Now you must activate your virtual env:
