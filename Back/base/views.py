@@ -195,7 +195,7 @@ def updateProduct(request,id=0):
 
 
 @api_view(['POST'])
-@permission_classes([IsAuthenticated])
+@permission_classes([IsAdminUser])
 def addCategory(request):
     if request.user.is_staff:
         cDescrp = request.data["cDescrp"]
@@ -206,7 +206,7 @@ def addCategory(request):
         return Response("category added")
 
 @api_view(['DELETE', 'GET'])
-# @permission_classes([IsAdminUser])
+@permission_classes([IsAdminUser])
 def deleteCategory(request,id=0):
     if request.user.is_staff:
         temp= Category.objects.get(catg_id=id)
