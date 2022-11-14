@@ -143,7 +143,7 @@ def updateUserPaymentDetails(request,id=0):
             print("there is a match!")
     return Response("product added")
         
-                # *****AALTERNATIVE CREATE PRODUCT FOR IMAGE UPLOAD EXPERIMENT  ******
+               
 class Create_new_product(APIView):
     permission_classes = [IsAuthenticated]
     parser_class = (MultiPartParser, FormParser)
@@ -163,26 +163,7 @@ class Create_new_product(APIView):
                 return Response(new_product_serializer.errors, status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response(status=status.HTTP_401_UNAUTHORIZED)
-            #**************************      *******************************************
-
-# @api_view(['POST'])
-# # @permission_classes([IsAdminUser])
-# def addProduct(request):
-#     user = request.user
-#     product1=Product()
-#     descrp = request.data["descrp"]
-#     priceee=request.data["priceee"]
-#     categorr=request.data["categorr"]
-#     # myBackImage=request.data["myBackImage"]
-#     # print(myBackImage)
-#     if request.user.is_staff:
-#         Product.objects.create(
-#             user=user,
-#             prod_desc=descrp,
-#             prod_price=priceee,
-#             image= request.FILES.get('myBackImage'),
-#             catg_id=Category.objects.get(catg_id=categorr))
-#         return Response("product added")
+            
 
 @api_view(['GET'])
 def getProducts(request,id=0):
@@ -240,18 +221,6 @@ def getCategories(request):
     categories = Category.objects.all()
     serializer = CategoriesSerializer(categories, many=True)
     return Response(serializer.data)
-    
-# @api_view(['POST'])
-# def update_profile(request, user_id):
-#     user = User.objects.get(pk=user_id)
-#     user.birth_date=request.data["birthdate"],
-#     user.userCity=request.data["usercity"],
-#     user.userStreetNumber=request.data["userstreetnumber"],
-#     user.userMobile=request.data["usermobile"],
-#     user.userCreditCardNumber=request.data["usercreditcardnumber"],
-#     user.userCreditCard3Digit=request.data["usercreditcard3digit"],
-#     user.userCreditCardExpiryDate=request.data["usercreditcardexpirydate"],
-#     user.save()
     
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
