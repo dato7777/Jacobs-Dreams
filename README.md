@@ -24,7 +24,7 @@ After opening your VS code, please run this command in your terminal to open pro
 ### Important: Please exit the main folder from the VS code and enter the inner folder "Jacob's Dreams" \
 Back Installation:
 1) If you have not yet installed the virtual environment package, please do so:\
-    pip install virtualenv
+    pip install virtualenv. \
 2) Please make sure that you are in main folder in the terminal (outside Back and Front), then create
 virtual environment:
     python -m virtualenv myenv   
