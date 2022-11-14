@@ -76,7 +76,7 @@ def registerClient(request):
 
 # updating user details for payment before checkout
 @api_view(['PUT', 'GET','POST'])
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def updateUserCheckout(request,id=0):
     
                                     # User address details  
@@ -92,14 +92,12 @@ def updateUserCheckout(request,id=0):
     temp.first_name=uFirstName
     temp.last_name=uLastName
     temp.save()
-    # myprods=Product.objects.all()
     profTemp=Profile.objects.all()
     print("length of profiles:",len(profTemp))
     for x in profTemp:
         print(x)
         if x.user_id==temp.id:
             foundProfile=Profile.objects.get(user_id=id)
-            # foundProfile.user_id=int(temp.id),
             foundProfile.birth_date=userBirth
             foundProfile.userCity=uCity
             foundProfile.userStreetNumber=uStreetNumber
@@ -121,7 +119,7 @@ def updateUserCheckout(request,id=0):
             x.save()
 
 @api_view(['PUT', 'GET','POST'])
-# @permission_classes([IsAuthenticated])
+@permission_classes([IsAuthenticated])
 def updateUserPaymentDetails(request,id=0):
     uCreditCard=request.data["uCreditCard"]
     uNameOnCard=request.data["uNameOnCard"]
