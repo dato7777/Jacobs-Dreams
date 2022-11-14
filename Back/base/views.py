@@ -143,7 +143,7 @@ def updateUserPaymentDetails(request,id=0):
         
                
 class Create_new_product(APIView):
-    permission_classes = [IsAuthenticated]
+    permission_classes = [IsAdminUser]
     parser_class = (MultiPartParser, FormParser)
 
     def post(self, request, *args, **kwargs):
@@ -173,7 +173,7 @@ def getProducts(request,id=0):
     return Response(serializer.data)
 
 @api_view(['DELETE', 'GET'])
-# @permission_classes([IsAdminUser])
+@permission_classes([IsAdminUser])
 def deleteProduct(request,id=0):
     if request.user.is_staff:
         temp= Product.objects.get(_id=id)
@@ -182,7 +182,7 @@ def deleteProduct(request,id=0):
         return Response("product deleted")
 
 @api_view(['PUT', 'GET'])
-# @permission_classes([IsAdminUser])
+@permission_classes([IsAdminUser])
 def updateProduct(request,id=0):
     if request.user.is_staff:
         temp= Product.objects.get(_id=id)
