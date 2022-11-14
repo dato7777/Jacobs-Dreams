@@ -170,7 +170,7 @@ const Login = () => {
                                     <h2>SIGN IN</h2>
                                     <input type="text" placeholder="Username" value={newUserName} onChange={(e) => setNewUserName(e.target.value)} required />
                                     <input type="password" placeholder="Password" value={newPwd} onChange={(e) => setNewPwd(e.target.value)} required type={'password'} />
-                                    {newUserName.length > 4 & newUserName.length < 11 & newPwd.length > 4 & newPwd.length < 11 ?
+                                    {newUserName.length > 3 & newUserName.length < 11 & newPwd.length > 4 & newPwd.length < 11 ?
                                         <Link to="/"> <button className="btn_login"
                                             onClick={() =>
                                                 dispatch(signInAsync({ username: newUserName, password: newPwd }),
