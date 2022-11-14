@@ -20,6 +20,8 @@ The git address for my project is:\
 https://github.com/dato7777/Jacobs-Dreams.git   \
 After opening your VS code, please run this command in your terminal to open project:\
   git clone https://github.com/dato7777/Jacobs-Dreams.git.  \
+
+### Important: Please exit the main folder from the VS code and enter the inner folder "Jacob's Dreams" \
 Back Installation:
 1) If you have not yet installed the virtual environment package, please do so:\
     pip install virtualenv
