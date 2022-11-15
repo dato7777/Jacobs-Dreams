@@ -6,6 +6,7 @@ import { selectCategories } from './CategoriesSlice'
 import { useSelector, useDispatch } from 'react-redux';
 import { getCategoriesAsync } from './CategoriesSlice'
 import myCard from '../components/MyCard';
+import jwt_decode from "jwt-decode";
 
 const Product = () => {
 
@@ -75,6 +76,7 @@ const Product = () => {
                     <Link to="#"><button onClick={(id) => dispatch(
                         addProductAsync({
                             token: token,
+                            userID:jwt_decode(localStorage.getItem('token')).user_id,
                             productDesc: desc,
                             productPrice: price,
                             productCatID: categ,
