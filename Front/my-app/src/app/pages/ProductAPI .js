@@ -8,12 +8,13 @@ const UPD_PROD = "http://127.0.0.1:8000/updateproduct/"
 
 export function addProduct(action) {
   const data = {
+    'user':action.userID,
     'prod_desc': action.productDesc,
     'catg_id': action.productCatID,
     'prod_price': action.productPrice,
     'image': action.myImage,
 }
-  // token=action.token.replace(/"/g, '')
+  action.token=action.token.replace(/"/g, '')
   
   return new Promise((resolve) =>
     axios.post(URL_ADD, data, {
@@ -24,20 +25,8 @@ export function addProduct(action) {
     }).then((res) => resolve({ data: res.data }))
   );
 }
-// export function addProduct(token, productDesc, productPrice, productCatID, myImage) {
-//   token=token.replace(/"/g, '')
-//   // console.log(myImage)
-//   return new Promise((resolve) =>
-//     axios.post(URL_ADD, { descrp: productDesc, priceee: productPrice, categorr: productCatID, myBackImage: myImage }, {
-//       headers: {
-//         'Authorization': `Bearer ${token}`,
-//         'Content-Type': 'multipart/form-data'
-//       }
-//     }).then((res) => resolve({ data: res.data }))
-//   );
-// }
+
 export function getProducts(catId) {
-  // console.log("cat id ",catId)
   return new Promise((resolve) =>
     axios(URL_PRODS + catId).then((res) => resolve({ data: res.data }))
     
